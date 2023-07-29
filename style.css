@@ -8,10 +8,45 @@ body {
     font-family: sans-serif;
 }
 
+.flip-container {
+    margin-top: 60px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 580px;
+    height: 580px;
+    perspective: 1000px;
+}
+
 img {
-    border-radius: 20px !important;
-    width: 380px;
-    height: 380px;
+    border-radius: 300px;
+    ;
+}
+
+.flipper {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+    /* se quiser uma animação na vertical,
+	troque por rotateX(180deg)
+	*/
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
 }
 
 h1 {
@@ -27,13 +62,14 @@ p {
 ul {
     margin-top: 35px !important;
 }
-li{
+
+li {
     margin-bottom: 18px;
     list-style: none;
 }
 
 a {
-    background-color:blueviolet;
+    background-color: blueviolet;
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -41,13 +77,20 @@ a {
     border-radius: 5px;
 }
 
-footer  {
+a:hover {
+    background-color: #BE81F7;
+    color: #8904B1;
+
+}
+
+footer {
     color: white;
     margin: 35px;
-    margin-top:auto;
+    margin-top: auto;
 }
+
 .container {
-    width: 380px;
+    width: 480px;
     text-align: center;
     margin-top: 41px;
     margin-left: auto;
