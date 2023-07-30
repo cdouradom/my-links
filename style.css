@@ -19,7 +19,6 @@ body {
 
 img {
     border-radius: 300px;
-    ;
 }
 
 .flipper {
@@ -53,10 +52,13 @@ h1 {
     color: white;
     margin-top: 31px;
     margin-bottom: 9px;
+    text-transform: uppercase;
 }
 
 p {
     color: white;
+    text-decoration: underline;
+    letter-spacing: 5px;
 }
 
 ul {
@@ -87,6 +89,8 @@ footer {
     color: white;
     margin: 35px;
     margin-top: auto;
+    text-decoration: #8904B1 underline dotted;
+    font-style: oblique ;
 }
 
 .container {
